@@ -3,7 +3,7 @@ import { Grid } from 'react-grid-layout';
 import Photo from './Photo';
 
 const Gallery = () => {
-  const photos = require('./photos.json');
+  const photos = require('../photos.json');
 
   return (
     <div className="gallery">
