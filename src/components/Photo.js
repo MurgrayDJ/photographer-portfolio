@@ -1,10 +1,17 @@
 import React from 'react';
 
-const Photo = ({ image, caption }) => (
-  <div className="photo">
-    <img src={image} alt={caption} />
-    <div className="caption">{caption}</div>
-  </div>
-);
+const Photo = ({ photo }) => {
+  return (
+    <img
+      src={photo.src}
+      alt={photo.alt}
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover'
+      }}
+    />
+  );
+};
 
 export default Photo;

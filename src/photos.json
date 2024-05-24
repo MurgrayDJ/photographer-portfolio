@@ -1,17 +1,17 @@
 [
     {
       "id": 1,
-      "image": "https://picsum.photos/200/300",
-      "caption": "Photo 1"
+      "src": "https://picsum.photos/200/300",
+      "alt": "Photo 1"
     },
     {
       "id": 2,
-      "image": "https://picsum.photos/200/301",
-      "caption": "Photo 2"
+      "src": "https://picsum.photos/200/301",
+      "alt": "Photo 2"
     },
     {
       "id": 3,
-      "image": "https://picsum.photos/200/302",
-      "caption": "Photo 3"
+      "src": "https://picsum.photos/200/302",
+      "alt": "Photo 3"
     }
   ]
