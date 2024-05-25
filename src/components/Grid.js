@@ -1,16 +1,8 @@
 import React from 'react';
 
-const Grid = ({ children, cols, rowHeight, width }) => {
-  const gridStyle = {
-    display: 'grid',
-    gridTemplateColumns: `repeat(${cols}, 1fr)`,
-    gridAutoRows: `${rowHeight}px`,
-    width: `${width}px`,
-    gap: '10px'
-  };
-
+const Grid = ({ children, rowHeight, width }) => {
   return (
-    <div style={gridStyle}>
+    <div className="grid">
       {children}
     </div>
   );

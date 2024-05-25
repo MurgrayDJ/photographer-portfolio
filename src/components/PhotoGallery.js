@@ -5,19 +5,27 @@ import Photo from './Photo';
 import photos from '../photos.json';
 
 const PhotoGallery = () => {
-  const cols = 4;
   const rowHeight = 200;
-  const width = 800;
+  const width = window.innerWidth;
+  const cols = Math.floor(width / 200);
+  const rows = Math.ceil(photos.length / cols) + 1;
 
   return (
-    <Grid cols={cols} rowHeight={rowHeight} width={width}>
-      {photos.map((photo, index) => (
-        <GridItem key={photo.id} x={index % cols} y={Math.floor(index / cols)} w={1} h={1}>
-          <Photo photo={photo} />
-        </GridItem>
-      ))}
+    <Grid rowHeight={rowHeight} width={width}>
+      {Array.from({ length: rows * cols }, (_, index) => {
+        const photo = photos[index];
+        return (
+          <GridItem key={index} x={index % cols} y={Math.floor(index / cols)} w={1} h={1}>
+            {photo ? (
+              <Photo photo={photo} />
+            ) : (
+              <div />
+            )}
+          </GridItem>
+        );
+      })}
     </Grid>
   );
 };
- 
+
 export default PhotoGallery;
